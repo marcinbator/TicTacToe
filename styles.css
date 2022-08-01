@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(41, 39, 39);
+  color: white;
+  min-height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h1 {
+  color: orangered;
+  padding: 50px;
+  font-size: 50px;
+  background: rgb(37, 35, 35);
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+}
+#container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+.players {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted white;
+  padding: 20px;
+  margin: 100px;
+  width: 200px;
+}
+#game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: orangered;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+.field {
+  background: rgb(41, 39, 39);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.field::selection {
+  color: inherit;
+}
+.field:hover {
+  background: rgb(69, 64, 64);
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
+footer {
+  padding: 10px;
+  background: rgb(37, 35, 35);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 760px) {
+  .players {
+    visibility: hidden;
+  }
+}
