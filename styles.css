@@ -64,12 +64,6 @@ h1 {
   background: rgb(69, 64, 64);
   cursor: pointer;
 }
-.selectedcircle {
-  background: rgb(61, 71, 180, 0.5);
-}
-.selectedcross {
-  background: rgba(221, 71, 71, 0.5);
-}
 .wincolor {
   color: orangered;
 }
@@ -85,7 +79,4 @@ footer {
   bottom: 0;
 }
 @media (max-width: 760px) {
-  .players {
-    visibility: hidden;
-  }
 }

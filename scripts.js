@@ -73,8 +73,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field1.value === field4.value &&
     field4.value === field7.value &&
@@ -92,8 +94,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field2.value === field5.value &&
     field5.value === field8.value &&
@@ -111,8 +115,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field3.value === field6.value &&
     field6.value === field9.value &&
@@ -130,8 +136,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field4.value === field6.value &&
     field6.value === field5.value &&
@@ -149,8 +157,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field7.value === field8.value &&
     field8.value === field9.value &&
@@ -168,8 +178,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field1.value === field5.value &&
     field5.value === field9.value &&
@@ -187,8 +199,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else if (
     field3.value === field5.value &&
     field5.value === field7.value &&
@@ -206,8 +220,10 @@ function win() {
       player2.score++;
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
+    document.getElementById("roundindicator").textContent =
+      "Zwycięzca: " + winner;
     setTimeout(remove, 1000);
-    nextplayer();
+    setTimeout(nextplayer, 1000);
   } else {
     draw();
   }
@@ -282,6 +298,7 @@ function fieldset1() {
       player1.playing = 0;
       player2.playing = 1;
       field1.value = "o";
+      s;
     } else {
       p1.innerHTML = player2.character;
       player2.playing = 0;
