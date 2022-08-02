@@ -61,7 +61,10 @@ function win() {
     field2.value != "none" &&
     field2.value === field3.value
   ) {
-    if ((field1.value = "o")) {
+    document.getElementById("pole1").classList.add("wincolor");
+    document.getElementById("pole2").classList.add("wincolor");
+    document.getElementById("pole3").classList.add("wincolor");
+    if (field1.value === "o") {
       winner = "Gracz 1!";
       player1.score++;
       score1.textContent = "Liczba wygranych: " + player1.score;
@@ -71,13 +74,180 @@ function win() {
       score2.textContent = "Liczba wygranych: " + player2.score;
     }
     setTimeout(remove, 1000);
-    player1.playing = 1;
-    player2.playing = 0;
-    whoplays();
+    nextplayer();
+  } else if (
+    field1.value === field4.value &&
+    field4.value === field7.value &&
+    field1.value != "none"
+  ) {
+    document.getElementById("pole1").classList.add("wincolor");
+    document.getElementById("pole4").classList.add("wincolor");
+    document.getElementById("pole7").classList.add("wincolor");
+    if (field1.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field2.value === field5.value &&
+    field5.value === field8.value &&
+    field2.value != "none"
+  ) {
+    document.getElementById("pole2").classList.add("wincolor");
+    document.getElementById("pole5").classList.add("wincolor");
+    document.getElementById("pole8").classList.add("wincolor");
+    if (field2.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field3.value === field6.value &&
+    field6.value === field9.value &&
+    field3.value != "none"
+  ) {
+    document.getElementById("pole3").classList.add("wincolor");
+    document.getElementById("pole6").classList.add("wincolor");
+    document.getElementById("pole9").classList.add("wincolor");
+    if (field3.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field4.value === field6.value &&
+    field6.value === field5.value &&
+    field4.value != "none"
+  ) {
+    document.getElementById("pole4").classList.add("wincolor");
+    document.getElementById("pole6").classList.add("wincolor");
+    document.getElementById("pole5").classList.add("wincolor");
+    if (field4.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field7.value === field8.value &&
+    field8.value === field9.value &&
+    field8.value != "none"
+  ) {
+    document.getElementById("pole7").classList.add("wincolor");
+    document.getElementById("pole8").classList.add("wincolor");
+    document.getElementById("pole9").classList.add("wincolor");
+    if (field8.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field1.value === field5.value &&
+    field5.value === field9.value &&
+    field1.value != "none"
+  ) {
+    document.getElementById("pole1").classList.add("wincolor");
+    document.getElementById("pole5").classList.add("wincolor");
+    document.getElementById("pole9").classList.add("wincolor");
+    if (field1.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else if (
+    field3.value === field5.value &&
+    field5.value === field7.value &&
+    field3.value != "none"
+  ) {
+    document.getElementById("pole3").classList.add("wincolor");
+    document.getElementById("pole5").classList.add("wincolor");
+    document.getElementById("pole7").classList.add("wincolor");
+    if (field3.value === "o") {
+      winner = "Gracz 1!";
+      player1.score++;
+      score1.textContent = "Liczba wygranych: " + player1.score;
+    } else {
+      winner = "Gracz 2!";
+      player2.score++;
+      score2.textContent = "Liczba wygranych: " + player2.score;
+    }
+    setTimeout(remove, 1000);
+    nextplayer();
+  } else {
+    draw();
+  }
+}
+function draw() {
+  var ile = 0;
+  if (field1.value != "none") {
+    ile++;
+  }
+  if (field2.value != "none") {
+    ile++;
+  }
+  if (field3.value != "none") {
+    ile++;
+  }
+  if (field4.value != "none") {
+    ile++;
+  }
+  if (field5.value != "none") {
+    ile++;
+  }
+  if (field6.value != "none") {
+    ile++;
+  }
+  if (field7.value != "none") {
+    ile++;
+  }
+  if (field8.value != "none") {
+    ile++;
+  }
+  if (field9.value != "none") {
+    ile++;
+  }
+  if (ile == 9) {
+    document.getElementById("roundindicator").textContent = "Remis!";
+    setTimeout(remove, 1000);
+    setTimeout(nextplayer, 1000);
   }
 }
 function remove() {
-  setTimeout(1000);
   field1.value = "none";
   field2.value = "none";
   field3.value = "none";
@@ -89,7 +259,19 @@ function remove() {
   field9.value = "none";
   for (i = 1; i <= 9; i++) {
     document.getElementById("pole" + i).innerHTML = " ";
+    document.getElementById("pole" + i).classList.remove("wincolor");
   }
+}
+function nextplayer() {
+  var lp = Math.round(Math.random());
+  if (lp === 1) {
+    player1.playing = 1;
+    player2.playing = 0;
+  } else {
+    player2.playing = 1;
+    player1.playing = 0;
+  }
+  whoplays();
 }
 var p1 = document.getElementById("pole1");
 p1.addEventListener("click", fieldset1);
@@ -181,6 +363,82 @@ function fieldset5() {
       player2.playing = 0;
       player1.playing = 1;
       field5.value = "x";
+    }
+    whoplays();
+    win();
+  }
+}
+var p6 = document.getElementById("pole6");
+p6.addEventListener("click", fieldset6);
+function fieldset6() {
+  if (!busy(field6)) {
+    if (player1.playing === 1) {
+      p6.innerHTML = player1.character;
+      player1.playing = 0;
+      player2.playing = 1;
+      field6.value = "o";
+    } else {
+      p6.innerHTML = player2.character;
+      player2.playing = 0;
+      player1.playing = 1;
+      field6.value = "x";
+    }
+    whoplays();
+    win();
+  }
+}
+var p7 = document.getElementById("pole7");
+p7.addEventListener("click", fieldset7);
+function fieldset7() {
+  if (!busy(field7)) {
+    if (player1.playing === 1) {
+      p7.innerHTML = player1.character;
+      player1.playing = 0;
+      player2.playing = 1;
+      field7.value = "o";
+    } else {
+      p7.innerHTML = player2.character;
+      player2.playing = 0;
+      player1.playing = 1;
+      field7.value = "x";
+    }
+    whoplays();
+    win();
+  }
+}
+var p8 = document.getElementById("pole8");
+p8.addEventListener("click", fieldset8);
+function fieldset8() {
+  if (!busy(field8)) {
+    if (player1.playing === 1) {
+      p8.innerHTML = player1.character;
+      player1.playing = 0;
+      player2.playing = 1;
+      field8.value = "o";
+    } else {
+      p8.innerHTML = player2.character;
+      player2.playing = 0;
+      player1.playing = 1;
+      field8.value = "x";
+    }
+    whoplays();
+    win();
+  }
+}
+var p9 = document.getElementById("pole9");
+p9.addEventListener("click", fieldset9);
+function fieldset9() {
+  if (!busy(field9)) {
+    if (player1.playing === 1) {
+      p9.innerHTML = player1.character;
+      player1.playing = 0;
+      player2.playing = 1;
+      field9.value = "o";
+    } else {
+      p9.innerHTML = player2.character;
+      player2.playing = 0;
+      player1.playing = 1;
+      field9.value = "x";
     }
     whoplays();
     win();
