@@ -39,9 +39,9 @@ var who;
 var indicator = document.getElementById("roundindicator");
 function whoplays() {
   if (player1.playing === 1) {
-    who = "Runda gracza 1.";
+    who = "Runda gracza 1 (O).";
   } else {
-    who = "Runda gracza 2.";
+    who = "Runda gracza 2 (X).";
   }
   indicator.textContent = who;
 }
